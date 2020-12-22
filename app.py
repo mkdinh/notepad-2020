@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 from flask_sqlalchemy import SQLAlchemy
 from flask_pymongo import PyMongo
 from os import environ
@@ -28,7 +28,7 @@ class Job(db.Model):
 
 @app.route('/')
 def index():
-    return "Hello world!"
+    return render_template('index.html')
 
 
 @app.route('/api/tasks-postgres')
