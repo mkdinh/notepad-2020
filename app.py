@@ -15,6 +15,11 @@ class Task(db.Model):
     description = db.Column(db.String)
 
 
+class Job(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    description = db.Column(db.String)
+
+
 @app.route('/')
 def index():
     return "Hello world!"
